@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22">
+   <children>
+      <TextField fx:id="memberIDtxt" layoutX="41.0" layoutY="149.0" prefHeight="32.0" prefWidth="157.0" promptText="Member ID" />
+      <TextField fx:id="bookCodetxt" layoutX="41.0" layoutY="99.0" prefHeight="32.0" prefWidth="157.0" promptText="Book code" />
+      <DatePicker fx:id="borrowingDatetxt" editable="false" layoutX="41.0" layoutY="200.0" prefHeight="32.0" prefWidth="175.0" promptText="Borrowing Date" />
+      <TextField fx:id="bookCodetxt1" layoutX="41.0" layoutY="256.0" prefHeight="32.0" prefWidth="157.0" promptText="Book code" />
+      <Label layoutX="32.0" layoutY="25.0" text="Return ">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="11.0" layoutY="85.0" prefHeight="2.0" prefWidth="576.0" />
+   </children>
+</AnchorPane>

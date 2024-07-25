@@ -75,7 +75,7 @@ public class BookController {
         colCategoryCode.setCellValueFactory(new PropertyValueFactory<>("categoryCode"));
         colAvailability.setCellValueFactory(new PropertyValueFactory<>("availability"));
        
-        getAllBook();
+        getAllBooks();
     }
 
     @FXML
@@ -85,11 +85,10 @@ public class BookController {
         
         if (resp.equals("Success")) {
             new Alert(Alert.AlertType.CONFIRMATION, "Delete Success").show();
-            getAllBook();
+            getAllBooks();
             clearForm();
 
         } else {
-            System.out.println("Error while Deleting Cusotmer");
             new Alert(Alert.AlertType.ERROR, "Error while Deleating Book").show();
         }
         
@@ -109,11 +108,10 @@ public class BookController {
         
         if (resp.equals("Success")) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved Success").show();
-            getAllBook();
+            getAllBooks();
             clearForm();
 
         } else {
-            System.out.println("Error while Saving Cusotmer");
             new Alert(Alert.AlertType.ERROR, "Error while Saving Book").show();
         }
         
@@ -127,17 +125,16 @@ public class BookController {
         
          if (resp.equals("Success")) {
             new Alert(Alert.AlertType.CONFIRMATION, "Update Success").show();
-            getAllBook();
+            getAllBooks();
             clearForm();
 
         } else {
-            System.out.println("Error while Saving Cusotmer");
             new Alert(Alert.AlertType.ERROR, "Error while Updating Book").show();
         }
          
     }
     
-    public void getAllBook() throws Exception{
+    public void getAllBooks() throws Exception{
         
          ArrayList<BookDto> bookDto=bookservice.getAll();        
          ObservableList<BookTM> bookTmList = FXCollections.observableArrayList();

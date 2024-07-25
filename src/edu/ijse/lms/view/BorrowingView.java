@@ -382,10 +382,10 @@ public class BorrowingView extends javax.swing.JFrame {
         borrowingDto.setBookCode(bookcodetxt.getText());
         borrowingDto.setBorrowingDate(borrowdatetxt.getText());
         borrowingDto.setDueDate(duedatetxt.getText());
-        SimpleDateFormat bdsdf = new SimpleDateFormat("dd/MM/yyyy");
-        Date borrowingDate = bdsdf.parse(borrowdatetxt.getText());
-        String borrowngDate = bdsdf.format(borrowingDate);
-        borrowingDto.setBorrowingDate(borrowngDate);
+//        SimpleDateFormat bdsdf = new SimpleDateFormat("dd/MM/yyyy");
+//        Date borrowingDate = bdsdf.parse(borrowdatetxt.getText());
+//        String borrowngDate = bdsdf.format(borrowingDate);
+//        borrowingDto.setBorrowingDate(borrowngDate);
 //        
 //        SimpleDateFormat ddsdf = new SimpleDateFormat("dd/MM/yyyy");
 //        Date dueDate = ddsdf.parse(duedatetxt.getText());

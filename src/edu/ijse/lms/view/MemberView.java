@@ -24,7 +24,7 @@ public class MemberView extends javax.swing.JFrame {
     public MemberView() {
         initComponents();
         this.MEMBER_CONTROLLER=new MemberController();
-        loadTable();
+    //    loadTable();
         
     }
 
@@ -256,12 +256,12 @@ public class MemberView extends javax.swing.JFrame {
     }//GEN-LAST:event_contacttxtActionPerformed
 
     private void savebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savebtnActionPerformed
-        saveMember();
+    //    saveMember();
         // TODO add your handling code here:
     }//GEN-LAST:event_savebtnActionPerformed
 
     private void updatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatebtnActionPerformed
-        updateMember();
+    //    updateMember();
         // TODO add your handling code here:
     }//GEN-LAST:event_updatebtnActionPerformed
 
@@ -276,11 +276,11 @@ public class MemberView extends javax.swing.JFrame {
 
     private void deletebtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deletebtn1MouseClicked
         // TODO add your handling code here:
-        deleteMember();
+    //    deleteMember();
     }//GEN-LAST:event_deletebtn1MouseClicked
 
     private void membertblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_membertblMouseClicked
-        searchMouseClick();
+     //   searchMouseClick();
         // TODO add your handling code here:
     }//GEN-LAST:event_membertblMouseClicked
 
@@ -338,89 +338,89 @@ public class MemberView extends javax.swing.JFrame {
     private javax.swing.JButton updatebtn;
     // End of variables declaration//GEN-END:variables
 
-    private void saveMember() {
-        try {
-            MemberDto membdto=new MemberDto(membidtxt.getText(),nametxt.getText(),addresstxt.getText(),Integer.parseInt(contacttxt.getText()));
-            String resp = MEMBER_CONTROLLER.saveMember(membdto);
-             JOptionPane.showMessageDialog(this, resp);
-             loadTable();
-             clearForm();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-
-    }
-    
-    private void deleteMember(){
-        try {
-            String membid=membidtxt.getText();
-            String resp=MEMBER_CONTROLLER.deleteMember(membid);
-            JOptionPane.showMessageDialog(this, resp);
-            loadTable();
-            clearForm();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-    } 
-    
-      private void loadTable(){
-          try {
-              String columns[]={"MemberID","MemberName","Address","Contact"};
-              DefaultTableModel dtm= new DefaultTableModel(columns,0){
-                  @Override
-                   public boolean isCellEditable(int row,int column){
-                        return false;
-                }
-              };
-              membertbl.setModel(dtm);
-              ArrayList<MemberDto> memberDtos=MEMBER_CONTROLLER.getAll();
-              for (MemberDto memberdto:memberDtos){
-                  Object[] rowData={memberdto.getMemberID(),memberdto.getMemberName(),memberdto.getAddress(),memberdto.getContact()};
-                  dtm.addRow(rowData);
-              }
-              
-              
-          } catch (Exception e) {
-              JOptionPane.showMessageDialog(this, e.getMessage());
-          }
-      }
-
-    private void updateMember() {
-        try {
-            MemberDto memberDto=new MemberDto(membidtxt.getText(),nametxt.getText(),addresstxt.getText(),Integer.parseInt(contacttxt.getText()));
-            String resp = MEMBER_CONTROLLER.updateMember(memberDto);
-            JOptionPane.showMessageDialog(this, resp);
-            loadTable();
-            clearForm();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-    
-    }
-    
-    private void clearForm(){
-        membidtxt.setText("");
-        nametxt.setText("");
-        addresstxt.setText("");
-        contacttxt.setText("");
-    }
-
-    private void searchMouseClick() {
-        try {
-           String membID = membertbl.getValueAt(membertbl.getSelectedRow(),0).toString();
-           MemberDto dto = MEMBER_CONTROLLER.get(membID);
-           if(dto!=null){
-               membidtxt.setText(dto.getMemberID());
-               nametxt.setText(dto.getMemberName());
-               addresstxt.setText(dto.getAddress());
-               contacttxt.setText(Integer.toString(dto.getContact()));
-           }
-          
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-       
-    }
+//    private void saveMember() {
+//        try {
+//            MemberDto membdto=new MemberDto(membidtxt.getText(),nametxt.getText(),addresstxt.getText(),Integer.parseInt(contacttxt.getText()));
+//            String resp = MEMBER_CONTROLLER.saveMember(membdto);
+//             JOptionPane.showMessageDialog(this, resp);
+//             loadTable();
+//             clearForm();
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(this, e.getMessage());
+//        }
+//
+//    }
+//    
+//    private void deleteMember(){
+//        try {
+//            String membid=membidtxt.getText();
+//            String resp=MEMBER_CONTROLLER.deleteMember(membid);
+//            JOptionPane.showMessageDialog(this, resp);
+//            loadTable();
+//            clearForm();
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(this, e.getMessage());
+//        }
+//    } 
+//    
+//      private void loadTable(){
+//          try {
+//              String columns[]={"MemberID","MemberName","Address","Contact"};
+//              DefaultTableModel dtm= new DefaultTableModel(columns,0){
+//                  @Override
+//                   public boolean isCellEditable(int row,int column){
+//                        return false;
+//                }
+//              };
+//              membertbl.setModel(dtm);
+//              ArrayList<MemberDto> memberDtos=MEMBER_CONTROLLER.getAll();
+//              for (MemberDto memberdto:memberDtos){
+//                  Object[] rowData={memberdto.getMemberID(),memberdto.getMemberName(),memberdto.getAddress(),memberdto.getContact()};
+//                  dtm.addRow(rowData);
+//              }
+//              
+//              
+//          } catch (Exception e) {
+//              JOptionPane.showMessageDialog(this, e.getMessage());
+//          }
+//      }
+//
+//    private void updateMember() {
+//        try {
+//            MemberDto memberDto=new MemberDto(membidtxt.getText(),nametxt.getText(),addresstxt.getText(),Integer.parseInt(contacttxt.getText()));
+//            String resp = MEMBER_CONTROLLER.updateMember(memberDto);
+//            JOptionPane.showMessageDialog(this, resp);
+//            loadTable();
+//            clearForm();
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(this, e.getMessage());
+//        }
+//    
+//    }
+//    
+//    private void clearForm(){
+//        membidtxt.setText("");
+//        nametxt.setText("");
+//        addresstxt.setText("");
+//        contacttxt.setText("");
+//    }
+//
+//    private void searchMouseClick() {
+//        try {
+//           String membID = membertbl.getValueAt(membertbl.getSelectedRow(),0).toString();
+//           MemberDto dto = MEMBER_CONTROLLER.get(membID);
+//           if(dto!=null){
+//               membidtxt.setText(dto.getMemberID());
+//               nametxt.setText(dto.getMemberName());
+//               addresstxt.setText(dto.getAddress());
+//               contacttxt.setText(Integer.toString(dto.getContact()));
+//           }
+//          
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(this, e.getMessage());
+//        }
+//       
+//    }
      
 
 }

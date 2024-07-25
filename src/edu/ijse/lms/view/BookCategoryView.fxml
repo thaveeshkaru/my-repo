@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="407.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.lms.controller.BookCategoryController">
+   <children>
+      <Label layoutX="21.0" layoutY="25.0" prefHeight="46.0" prefWidth="285.0" text="Book Category" textFill="#352979">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutY="90.0" prefHeight="10.0" prefWidth="641.0" />
+      <TextField fx:id="descriptiontxt" layoutX="21.0" layoutY="226.0" prefHeight="32.0" prefWidth="157.0" promptText="Description" />
+      <TextField fx:id="categorytxt" layoutX="21.0" layoutY="175.0" prefHeight="32.0" prefWidth="157.0" promptText="Category" />
+      <TextField fx:id="categoryCodetxt" layoutX="21.0" layoutY="126.0" prefHeight="32.0" prefWidth="157.0" promptText="Category Code" />
+      <TableView fx:id="bookCategorytbl" layoutX="236.0" layoutY="126.0" prefHeight="200.0" prefWidth="374.0">
+        <columns>
+          <TableColumn fx:id="colCategoryCode" prefWidth="95.99998474121094" text="Category Code" />
+          <TableColumn fx:id="colCategory" prefWidth="92.0" text="Category" />
+            <TableColumn fx:id="colDescription" prefWidth="185.60001220703123" text="Description" />
+        </columns>
+      </TableView>
+      <Button layoutX="531.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="32.0" prefWidth="78.0" style="-fx-background-color: #096096;" text="Save" textFill="#f9f9fa">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="438.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="32.0" prefWidth="78.0" style="-fx-background-color: #096096;" text="Update" textFill="#f7f5f5">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="344.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="78.0" style="-fx-background-color: #096096;" text="Delete" textFill="#f2f0f0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
