@@ -17,6 +17,6 @@ public interface ReturnService extends SuperService{
 
     public Double searchFine(ReturnDto dto)throws Exception;
     public String placeReturn(ArrayList<ReturnDto> returnDtos)throws Exception;
-    public BorrowingDto SearchBorrowing(String membID, String bookCode)throws Exception;
+    public BorrowingDto searchBorrowing(String membID, String bookCode)throws Exception;
     
 }

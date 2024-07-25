@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.lms.controller.BorrowingController">
+<AnchorPane id="AnchorPane" prefHeight="589.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.lms.controller.BorrowingController">
    <children>
-      <Label layoutX="26.0" layoutY="27.0" text="Borrowing" textFill="#352979">
+      <Label layoutX="31.0" layoutY="27.0" text="Borrowing" textFill="#352979">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="40.0" />
          </font>
@@ -21,14 +21,14 @@
       <Separator layoutY="90.0" prefHeight="8.0" prefWidth="602.0" />
       <TextField fx:id="memberIDtxt" layoutX="31.0" layoutY="121.0" prefHeight="32.0" prefWidth="157.0" promptText="Member ID" />
       <TextField fx:id="bookCodetxt" layoutX="31.0" layoutY="172.0" prefHeight="32.0" prefWidth="157.0" promptText="Book code" />
-      <Button layoutX="212.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnMemberSearchOnAction" prefHeight="32.0" prefWidth="58.0" style="-fx-background-color: #096096;" text="Search" textFill="#faf6f6">
+      <Button layoutX="212.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnMemberSearchOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #096096;" text="Search" textFill="#faf6f6">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
       <Label fx:id="memberData" layoutX="294.0" layoutY="121.0" prefHeight="32.0" prefWidth="218.0" />
       <Label fx:id="bookData" layoutX="294.0" layoutY="172.0" prefHeight="32.0" prefWidth="218.0" />
-      <DatePicker fx:id="borrowingDatetxt" editable="false" layoutX="31.0" layoutY="224.0" prefHeight="32.0" prefWidth="175.0" promptText="Borrowing Date" />
-      <DatePicker fx:id="dueDatetxt" editable="false" layoutX="31.0" layoutY="271.0" prefHeight="32.0" prefWidth="175.0" promptText="Due Date" />
+      <DatePicker fx:id="borrowingDatetxt" editable="false" layoutX="31.0" layoutY="224.0" prefHeight="32.0" prefWidth="158.0" promptText="Borrowing Date" />
+      <DatePicker fx:id="dueDatetxt" editable="false" layoutX="31.0" layoutY="271.0" prefHeight="32.0" prefWidth="158.0" promptText="Due Date" />
       <TableView fx:id="borrowingtbl" layoutX="31.0" layoutY="321.0" prefHeight="200.0" prefWidth="532.0">
         <columns>
           <TableColumn fx:id="colMemberID" prefWidth="91.19994926452637" text="Member ID" />
@@ -37,16 +37,16 @@
             <TableColumn fx:id="colDueDate" prefWidth="167.19998168945312" text="Due Date" />
         </columns>
       </TableView>
-      <Button layoutX="468.0" layoutY="530.0" mnemonicParsing="false" onAction="#btnPlaceOnAction" prefHeight="32.0" prefWidth="94.0" style="-fx-background-color: #096096;" text="Place Borrow" textFill="#f9f9fa">
+      <Button layoutX="468.0" layoutY="536.0" mnemonicParsing="false" onAction="#btnPlaceOnAction" prefHeight="32.0" prefWidth="94.0" style="-fx-background-color: #096096;" text="Place Borrow" textFill="#f9f9fa">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="222.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="32.0" prefWidth="47.0" style="-fx-background-color: #096096;" text="Add" textFill="#fcfcfc">
+      <Button layoutX="212.0" layoutY="275.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #096096;" text="Add" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Button layoutX="212.0" layoutY="172.0" mnemonicParsing="false" onAction="#btnBookSearchOnAction" prefHeight="32.0" prefWidth="58.0" style="-fx-background-color: #096096;" text="Search" textFill="#f5f7f7">
+      <Button layoutX="212.0" layoutY="178.0" mnemonicParsing="false" onAction="#btnBookSearchOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #096096;" text="Search" textFill="#f5f7f7">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>

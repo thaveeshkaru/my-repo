@@ -38,7 +38,7 @@ public class ReturnServiceImpl implements ReturnService{
 //            entity.setMemberID(dto.getMemberID());
             BorrowingEntity borrowingentity = borrowingDao.get(dto.getMemberID(),dto.getBookCode());
             double fineRate = 1.0; // Fine rate per day
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date dueDate = sdf.parse(borrowingentity.getDueDate());
             Date returnDate = sdf.parse(dto.getReturnDate());
 
@@ -122,7 +122,7 @@ public class ReturnServiceImpl implements ReturnService{
     }
 
     @Override
-    public BorrowingDto SearchBorrowing(String membID, String bookCode) throws Exception {
+    public BorrowingDto searchBorrowing(String membID, String bookCode) throws Exception {
         BorrowingEntity entity = borrowingDao.get(membID, bookCode);
         BorrowingDto dto = new BorrowingDto(entity.getMemberID(),entity.getBookCode(),entity.getBorrowingDate(),entity.getDueDate());
         return dto;

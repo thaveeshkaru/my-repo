@@ -67,13 +67,19 @@ public class HomePageController {
         Stage stage = new Stage();
         stage.setScene(new Scene(node));
         stage.show();
-        stage.setTitle("Borrowing Form");
+        stage.setTitle("Borrowing Book");
         
 
     }
 
     @FXML
-    void btnReturnBookOnAction(ActionEvent event) {
+    void btnReturnBookOnAction(ActionEvent event) throws IOException {
+        URL resourse = this.getClass().getResource("/edu/ijse/lms/view/ReturnView.fxml");
+        Parent node = FXMLLoader.load(resourse);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(node));
+        stage.show();
+        stage.setTitle("Return Book");
 
     }
 }
