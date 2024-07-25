@@ -44,7 +44,6 @@ public class LoginController {
         String resp = Loginservice.getLogin(dto);
         
         if(resp.equals("Success")){
-            //new Alert(Alert.AlertType.CONFIRMATION, "Saved Success").show();
             URL resource = this.getClass().getResource("/edu/ijse/lms/view/HomePageView.fxml");
             Parent node = FXMLLoader.load(resource);
             Stage stage = new Stage();

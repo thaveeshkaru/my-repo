@@ -103,6 +103,7 @@ public class ReturnController {
         }
         
         returnBooktbl.setItems(returnTMList);
+        clearForm();
     }
 
     @FXML
@@ -126,6 +127,14 @@ public class ReturnController {
             new Alert(Alert.AlertType.ERROR, "Error while Placing Return").show();
         }
 
+    }
+    
+    private void clearForm(){
+         memberIDtxt.setText("");
+         bookCodetxt.setText("");
+         returnDatetxt.setValue(null);
+         finetxt.setText("");
+     
     }
 
     public Double searchFine(ReturnDto dto)throws Exception{

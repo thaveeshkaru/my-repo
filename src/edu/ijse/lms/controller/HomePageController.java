@@ -20,6 +20,7 @@ import javafx.stage.Stage;
 public class HomePageController {
     
     
+    
     @FXML
     void btnMemberOnAction(ActionEvent event) throws IOException {
         
@@ -29,6 +30,7 @@ public class HomePageController {
         stage.setScene(new Scene(node));
         stage.show();
         stage.setTitle("Member Form");
+        
 
     }
     

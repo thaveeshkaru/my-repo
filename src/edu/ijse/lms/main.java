@@ -10,12 +10,16 @@ package edu.ijse.lms;
 //import edu.ijse.lms.view.LoginView;
 //import edu.ijse.lms.view.MemberView;
 //import edu.ijse.lms.view.ReturnView;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -39,12 +43,28 @@ public class main extends Application{
       //    new BorrowingView().setVisible(true);
        //   new ReturnView().setVisible(true);
     }
+    private ImageView backgrountImg;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+       
+       Image image = null;
+        try {
+            image = new Image(new FileInputStream("C:\\Users\\DELL\\Downloads\\background-pixel-rain-abstract\\Login Image.jpg"));    
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        this.backgrountImg = new ImageView(image);
+        backgrountImg.setFitHeight(500);
+        backgrountImg.setFitWidth(350);
+        
        URL resource = getClass().getResource("/edu/ijse/lms/view/LoginView.fxml");
        Parent root = FXMLLoader.load(resource);
-       primaryStage.setScene(new Scene(root));
+       Group gpRoot = new Group();
+       gpRoot.getChildren().add(backgrountImg);
+       gpRoot.getChildren().add(root);
+       primaryStage.setScene(new Scene(gpRoot));
        primaryStage.show();
        primaryStage.setTitle("Login");
     

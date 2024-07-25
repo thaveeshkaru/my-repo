@@ -89,7 +89,7 @@ public class BorrowingController {
         borrowingDto.setBorrowingDate(borrowld.toString());
         LocalDate dueld = dueDatetxt.getValue();
         borrowingDto.setDueDate(dueld.toString());
-        System.out.println(borrowingDto.getDueDate());
+      //System.out.println(borrowingDto.getDueDate());
         
         borrowingDtos.add(borrowingDto);
          
@@ -100,6 +100,8 @@ public class BorrowingController {
         borrowingTMList.add(borrowingTM);
         borrowingtbl.setItems(borrowingTMList);
         }
+        
+        clearForm();
 
     }
 
@@ -126,13 +128,27 @@ public class BorrowingController {
           
          if (resp.equals("Success")) {
             new Alert(Alert.AlertType.CONFIRMATION, "Place Borrow Success").show();
-
+           //orrowingtbl.setVisible(true);
         } else {
             new Alert(Alert.AlertType.ERROR, "Error while placing borrow Book").show();
         }
         
 
     }
+    
+    private void clearForm(){
+        memberIDtxt.setText("");
+        bookCodetxt.setText("");
+        borrowingDatetxt.setValue(null);
+        dueDatetxt.setValue(null);
+    }
+    
+//    private void clearTable(){
+//        colMemberID.setTex
+//        colBookCode.setCellFactory(null);
+//        colBorrowingDate.setCellFactory(null);
+//        colDueDate.setCellFactory(null);
+//    }
 
 
     public MemberDto getMember(String membID)throws Exception{
