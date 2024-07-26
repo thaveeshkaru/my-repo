@@ -48,16 +48,12 @@ public class main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception{
        
-       Image image = null;
-        try {
-            image = new Image(new FileInputStream("C:\\Users\\DELL\\Downloads\\background-pixel-rain-abstract\\Login Image.jpg"));    
-            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        this.backgrountImg = new ImageView(image);
-        backgrountImg.setFitHeight(500);
-        backgrountImg.setFitWidth(350);
+
+       Image image = new Image(new FileInputStream("C:\\Users\\DELL\\Downloads\\studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product 222.jpg"));    
+        
+       this.backgrountImg = new ImageView(image);
+       backgrountImg.setFitHeight(500);
+       backgrountImg.setFitWidth(350);
         
        URL resource = getClass().getResource("/edu/ijse/lms/view/LoginView.fxml");
        Parent root = FXMLLoader.load(resource);

@@ -12,21 +12,27 @@
    <children>
       <AnchorPane layoutX="350.0" prefHeight="502.0" prefWidth="350.0">
          <children>
-            <Label layoutX="110.0" layoutY="136.0" prefHeight="58.0" prefWidth="130.0" text="Login" textFill="#21477b">
+            <Label layoutX="120.0" layoutY="141.0" prefHeight="58.0" prefWidth="110.0" text="Login" textFill="#21477b">
                <font>
-                  <Font name="Segoe UI Black" size="40.0" />
+                  <Font name="System Bold" size="40.0" />
                </font>
             </Label>
-            <TextField fx:id="usernametxt" layoutX="49.0" layoutY="234.0" prefHeight="33.0" prefWidth="242.0" promptText="Username" />
-            <PasswordField fx:id="passwordtxt" layoutX="49.0" layoutY="286.0" prefHeight="34.0" prefWidth="242.0" promptText="Password" />
+            <TextField fx:id="usernametxt" layoutX="49.0" layoutY="234.0" prefHeight="33.0" prefWidth="242.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #662d60; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="passwordtxt" layoutX="49.0" layoutY="286.0" prefHeight="34.0" prefWidth="242.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #662d60; -fx-border-width: 0px 0px 2px 0px;" />
             <Button layoutX="105.0" layoutY="351.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #662d60; -fx-background-radius: 15px;" text="Login" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
-            <FontAwesomeIcon fill="#662d60" glyphName="USERS" layoutX="134.0" layoutY="125.0" size="75" wrappingWidth="71.39999389648438" />
+            <FontAwesomeIcon fill="#662d60" glyphName="USERS" layoutX="134.0" layoutY="129.0" size="75" wrappingWidth="71.39999389648438" />
             <FontAwesomeIcon fill="#5e5c5c" glyphName="USER" layoutX="272.0" layoutY="256.0" size="15" />
             <FontAwesomeIcon fill="#5e5c5c" glyphName="KEY" layoutX="270.0" layoutY="308.0" size="15" />
          </children>
       </AnchorPane>
+      <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="138.0" layoutY="224.0" size="70" />
+      <Label layoutX="79.0" layoutY="251.0" text="Library Management" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

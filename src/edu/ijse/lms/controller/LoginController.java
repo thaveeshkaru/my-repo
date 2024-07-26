@@ -7,17 +7,20 @@ package edu.ijse.lms.controller;
 import edu.ijse.lms.dto.LoginDto;
 import edu.ijse.lms.service.ServiceFactory;
 import edu.ijse.lms.service.custom.LoginService;
-//import java.awt.Button;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -33,6 +36,8 @@ public class LoginController {
 
      @FXML
      private TextField usernametxt;
+     
+     private ImageView backgrountImg;
         
      @FXML
      void btnLoginOnAction(ActionEvent event) throws IOException, Exception{
@@ -44,10 +49,17 @@ public class LoginController {
         String resp = Loginservice.getLogin(dto);
         
         if(resp.equals("Success")){
+            Image image = new Image(new FileInputStream("C:\\Users\\DELL\\AppData\\Local\\Temp\\f6ed0ddd-591e-44ba-bf3d-88b2077dbaa0_dark-wavy-background-concept.zip.aa0\\3334898.jpg"));           
+            this.backgrountImg = new ImageView(image);
+            backgrountImg.setFitHeight(500);
+            backgrountImg.setFitWidth(800);
             URL resource = this.getClass().getResource("/edu/ijse/lms/view/HomePageView.fxml");
             Parent node = FXMLLoader.load(resource);
+            Group gpRoot = new Group();
+            gpRoot.getChildren().add(backgrountImg);
+            gpRoot.getChildren().add(node);
             Stage stage = new Stage();
-            stage.setScene(new Scene(node));
+            stage.setScene(new Scene(gpRoot));
             stage.show();
             stage.setTitle("LMS Home");
             
@@ -58,3 +70,4 @@ public class LoginController {
         
     }
 }
+   

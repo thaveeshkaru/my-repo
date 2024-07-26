@@ -68,6 +68,7 @@ public class BookController {
         
     }
     
+    
     public void initialize() throws Exception {
         colBookCode.setCellValueFactory(new PropertyValueFactory<>("bookCode"));
         colBookTitle.setCellValueFactory(new PropertyValueFactory<>("bookTitle"));
@@ -75,6 +76,7 @@ public class BookController {
         colCategoryCode.setCellValueFactory(new PropertyValueFactory<>("categoryCode"));
         colAvailability.setCellValueFactory(new PropertyValueFactory<>("availability"));
        
+
         getAllBooks();
     }
 
