@@ -17,10 +17,10 @@
          </font>
       </Label>
       <Separator layoutY="92.0" prefHeight="8.0" prefWidth="800.0" />
-      <TextField fx:id="descriptiontxt" layoutX="21.0" layoutY="226.0" prefHeight="32.0" prefWidth="210.0" promptText="Description" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField fx:id="categorytxt" layoutX="21.0" layoutY="175.0" prefHeight="32.0" prefWidth="157.0" promptText="Category" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" />
-      <TextField fx:id="categoryCodetxt" layoutX="21.0" layoutY="126.0" prefHeight="32.0" prefWidth="157.0" promptText="Category Code" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" />
-      <TableView fx:id="bookCategorytbl" layoutX="263.0" layoutY="126.0" prefHeight="290.0" prefWidth="506.0">
+      <TextField fx:id="descriptiontxt" layoutX="21.0" layoutY="226.0" prefHeight="32.0" prefWidth="210.0" promptText="Description" />
+      <TextField fx:id="categorytxt" layoutX="21.0" layoutY="175.0" prefHeight="32.0" prefWidth="157.0" promptText="Category" />
+      <TextField fx:id="categoryCodetxt" layoutX="21.0" layoutY="126.0" prefHeight="32.0" prefWidth="157.0" promptText="Category Code" />
+      <TableView fx:id="bookCategorytbl" layoutX="263.0" layoutY="126.0" onMouseClicked="#onMouseClickedAction" prefHeight="290.0" prefWidth="506.0">
         <columns>
           <TableColumn fx:id="colCategoryCode" prefWidth="95.99998474121094" text="Category Code" />
           <TableColumn fx:id="colCategory" prefWidth="122.4000244140625" text="Category" />

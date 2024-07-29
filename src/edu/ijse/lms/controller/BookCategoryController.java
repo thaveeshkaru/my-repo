@@ -18,6 +18,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 
 /**
  *
@@ -116,6 +117,17 @@ public class BookCategoryController {
                   bookCategoryTMList.add(bookCategoryTM);
               }
         bookCategorytbl.setItems(bookCategoryTMList);
+    }
+    
+        @FXML
+    void onMouseClickedAction(MouseEvent event) {
+    
+         int index =  bookCategorytbl.getSelectionModel().getSelectedIndex();
+         
+         categoryCodetxt.setText(colCategoryCode.getCellData(index).toString());
+         categorytxt.setText(colCategory.getCellData(index).toString());
+         descriptiontxt.setText(colDescription.getCellData(index).toString());
+
     }
     
     private void clearForm(){

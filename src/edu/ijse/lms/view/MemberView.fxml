@@ -9,19 +9,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.lms.controller.MemberController">
+<AnchorPane id="AnchorPane" onMouseClicked="#onMouseClickedAction" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.lms.controller.MemberController">
    <children>
-      <Label layoutX="25.0" layoutY="27.0" text="Member Form" textFill="WHITE">
+      <Label layoutX="25.0" layoutY="27.0" text="Member Form" textFill="#eaeaef">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="40.0" />
          </font>
       </Label>
-      <TextField fx:id="memberIdtxt" layoutX="25.0" layoutY="121.0" prefHeight="32.0" prefWidth="157.0" promptText="Member ID" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField fx:id="nametxt" layoutX="25.0" layoutY="168.0" prefHeight="32.0" prefWidth="157.0" promptText="Name" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField fx:id="addresstxt" layoutX="25.0" layoutY="215.0" prefHeight="32.0" prefWidth="157.0" promptText="Address" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField fx:id="contacttxt" layoutX="25.0" layoutY="263.0" prefHeight="32.0" prefWidth="157.0" promptText="Contact" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="memberIdtxt" layoutX="25.0" layoutY="121.0" prefHeight="32.0" prefWidth="157.0" promptText="Member ID" />
+      <TextField fx:id="nametxt" layoutX="25.0" layoutY="168.0" prefHeight="32.0" prefWidth="157.0" promptText="Name" />
+      <TextField fx:id="addresstxt" layoutX="25.0" layoutY="215.0" prefHeight="32.0" prefWidth="157.0" promptText="Address" />
+      <TextField fx:id="contacttxt" layoutX="25.0" layoutY="263.0" prefHeight="32.0" prefWidth="157.0" promptText="Contact" />
       <Separator layoutX="-8.0" layoutY="91.0" prefHeight="2.0" prefWidth="806.0" />
-      <TableView fx:id="membertbl" layoutX="234.0" layoutY="121.0" prefHeight="296.0" prefWidth="532.0">
+      <TableView fx:id="membertbl" layoutX="234.0" layoutY="121.0" onMouseClicked="#onMouseClickedAction" prefHeight="296.0" prefWidth="532.0">
         <columns>
           <TableColumn fx:id="colMemberID" prefWidth="83.20001220703125" text="Member ID" />
           <TableColumn fx:id="colName" prefWidth="132.0" text="Name" />

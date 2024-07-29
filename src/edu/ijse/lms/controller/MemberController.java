@@ -18,6 +18,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 
 /**
  *
@@ -53,6 +54,7 @@ public class MemberController {
 
     @FXML
     private TextField nametxt;
+    
     
     
     public void initialize() throws Exception {
@@ -132,6 +134,18 @@ public class MemberController {
         nametxt.setText("");
         addresstxt.setText("");
         contacttxt.setText("");
+    }
+    
+    @FXML
+    void onMouseClickedAction(MouseEvent event) {
+
+        int index =  membertbl.getSelectionModel().getSelectedIndex();
+        
+         memberIdtxt.setText(colMemberID.getCellData(index).toString());
+         nametxt.setText(colName.getCellData(index).toString());
+         addresstxt.setText(colAddress.getCellData(index).toString());
+         contacttxt.setText(colContact.getCellData(index).toString());
+        
     }
     
 }

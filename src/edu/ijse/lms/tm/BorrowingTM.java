@@ -14,6 +14,9 @@ public class BorrowingTM {
     private String borrowingDate;
     private String dueDate;
 
+    public BorrowingTM() {
+    }
+
     public BorrowingTM(String memberID, String bookCode, String borrowingDate, String dueDate) {
         this.memberID = memberID;
         this.bookCode = bookCode;

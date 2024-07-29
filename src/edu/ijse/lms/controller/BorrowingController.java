@@ -12,7 +12,6 @@ import edu.ijse.lms.service.custom.BorrowingService;
 import edu.ijse.lms.tm.BorrowingTM;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -24,7 +23,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -96,9 +94,9 @@ public class BorrowingController {
         ObservableList<BorrowingTM> borrowingTMList = FXCollections.observableArrayList();
         
         for(BorrowingDto Dto: borrowingDtos ){
-        BorrowingTM borrowingTM = new BorrowingTM(Dto.getMemberID(),Dto.getBookCode(),Dto.getBorrowingDate(),Dto.getDueDate());
-        borrowingTMList.add(borrowingTM);
-        borrowingtbl.setItems(borrowingTMList);
+            BorrowingTM borrowingTM = new BorrowingTM(Dto.getMemberID(),Dto.getBookCode(),Dto.getBorrowingDate(),Dto.getDueDate());
+            borrowingTMList.add(borrowingTM);
+            borrowingtbl.setItems(borrowingTMList);
         }
         
         clearForm();
@@ -123,12 +121,13 @@ public class BorrowingController {
 
     @FXML
     void btnPlaceOnAction(ActionEvent event) throws Exception {
-        
+
          String resp=borrowingservice.placeBorrowing(borrowingDtos);
           
          if (resp.equals("Success")) {
             new Alert(Alert.AlertType.CONFIRMATION, "Place Borrow Success").show();
-           //orrowingtbl.setVisible(true);
+            borrowingtbl.getItems().clear();
+            
         } else {
             new Alert(Alert.AlertType.ERROR, "Error while placing borrow Book").show();
         }
@@ -142,14 +141,6 @@ public class BorrowingController {
         borrowingDatetxt.setValue(null);
         dueDatetxt.setValue(null);
     }
-    
-//    private void clearTable(){
-//        colMemberID.setTex
-//        colBookCode.setCellFactory(null);
-//        colBorrowingDate.setCellFactory(null);
-//        colDueDate.setCellFactory(null);
-//    }
-
 
     public MemberDto getMember(String membID)throws Exception{
         return borrowingservice.getMember(membID);

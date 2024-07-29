@@ -49,10 +49,10 @@ public class LoginController {
         String resp = Loginservice.getLogin(dto);
         
         if(resp.equals("Success")){
-            Image image = new Image(new FileInputStream("C:\\Users\\DELL\\AppData\\Local\\Temp\\f6ed0ddd-591e-44ba-bf3d-88b2077dbaa0_dark-wavy-background-concept.zip.aa0\\3334898.jpg"));           
+            Image image = new Image(new FileInputStream("C:\\Users\\DELL\\AppData\\Local\\Temp\\c4f23937-e8fa-417d-b1de-b025b8a1ae36_dark-wavy-background-concept.zip.e36\\3334898.jpg"));           
             this.backgrountImg = new ImageView(image);
-            backgrountImg.setFitHeight(500);
-            backgrountImg.setFitWidth(800);
+            backgrountImg.setFitHeight(700);
+            backgrountImg.setFitWidth(1100);
             URL resource = this.getClass().getResource("/edu/ijse/lms/view/HomePageView.fxml");
             Parent node = FXMLLoader.load(resource);
             Group gpRoot = new Group();

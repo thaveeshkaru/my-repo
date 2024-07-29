@@ -122,6 +122,7 @@ public class ReturnController {
          
         if (resp.equals("Success")) {
             new Alert(Alert.AlertType.CONFIRMATION, "Place Return Success").show();
+            returnBooktbl.getItems().clear();
 
         } else {
             new Alert(Alert.AlertType.ERROR, "Error while Placing Return").show();

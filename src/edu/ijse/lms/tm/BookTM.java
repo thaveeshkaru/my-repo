@@ -26,6 +26,11 @@ public class BookTM {
         this.availability = availability;
     }
 
+    public BookTM() {
+    }
+    
+    
+
     public String getBookCode() {
         return bookCode;
     }

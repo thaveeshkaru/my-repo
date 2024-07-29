@@ -158,6 +158,19 @@ public class BookController {
         availabilitytxt.setText("");
         
     }
+
+      @FXML
+    void onMouseClickAction(MouseEvent event)throws Exception{
+
+         int index =  booktbl.getSelectionModel().getSelectedIndex();
+
+         bookCodetxt.setText(colBookCode.getCellData(index).toString());
+         bookTitletxt.setText(colBookTitle.getCellData(index).toString());
+         authortxt.setText(colAuthor.getCellData(index).toString());
+         categoryCodeTxt.setText(colCategoryCode.getCellData(index).toString());
+         availabilitytxt.setText(Integer.toString(colAvailability.getCellData(index)));
+        
+    }
     
     public String saveBook(BookDto bookDto)throws Exception{
         return bookservice.saveBook(bookDto);

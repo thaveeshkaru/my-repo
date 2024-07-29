@@ -11,17 +11,17 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.lms.controller.BookController">
    <children>
-      <Label layoutX="33.0" layoutY="27.0" text="Book Form" textFill="WHITE">
+      <Label layoutX="33.0" layoutY="27.0" text="Book Form" textFill="#eaeaef">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="40.0" />
          </font>
       </Label>
-      <TextField fx:id="bookTitletxt" layoutX="33.0" layoutY="158.0" prefHeight="32.0" prefWidth="157.0" promptText="Book Title" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField fx:id="bookCodetxt" layoutX="34.0" layoutY="109.0" prefHeight="32.0" prefWidth="165.0" promptText="Book Code" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField fx:id="authortxt" layoutX="34.0" layoutY="208.0" prefHeight="32.0" prefWidth="158.0" promptText="Author" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField fx:id="categoryCodeTxt" layoutX="34.0" layoutY="254.0" prefHeight="32.0" prefWidth="158.0" promptText="Category Code" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField fx:id="availabilitytxt" layoutX="33.0" layoutY="302.0" prefHeight="32.0" prefWidth="158.0" promptText="Availability" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
-      <TableView fx:id="booktbl" layoutX="237.0" layoutY="108.0" mouseTransparent="true" prefHeight="307.0" prefWidth="530.0">
+      <TextField fx:id="bookTitletxt" layoutX="33.0" layoutY="158.0" prefHeight="32.0" prefWidth="157.0" promptText="Book Title" />
+      <TextField fx:id="bookCodetxt" layoutX="34.0" layoutY="109.0" prefHeight="32.0" prefWidth="165.0" promptText="Book Code" />
+      <TextField fx:id="authortxt" layoutX="34.0" layoutY="208.0" prefHeight="32.0" prefWidth="158.0" promptText="Author" />
+      <TextField fx:id="categoryCodeTxt" layoutX="34.0" layoutY="254.0" prefHeight="32.0" prefWidth="158.0" promptText="Category Code" />
+      <TextField fx:id="availabilitytxt" layoutX="33.0" layoutY="302.0" prefHeight="32.0" prefWidth="158.0" promptText="Availability" />
+      <TableView fx:id="booktbl" layoutX="237.0" layoutY="108.0" onMouseClicked="#onMouseClickAction" prefHeight="307.0" prefWidth="530.0">
         <columns>
           <TableColumn fx:id="colBookCode" prefWidth="75.0" text="Book Code" />
           <TableColumn fx:id="colBookTitle" prefWidth="156.800048828125" text="Book Title" />

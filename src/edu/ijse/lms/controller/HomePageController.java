@@ -28,7 +28,7 @@ public class HomePageController {
     @FXML
     void btnMemberOnAction(ActionEvent event) throws IOException {
         
-        Image image = new Image(new FileInputStream("C:\\Users\\DELL\\AppData\\Local\\Temp\\f7708835-ac82-4fb7-a920-2ef142a6bef0_background-gradient-minimalist-design-style.zip.ef0\\vvq6.jpg"));           
+        Image image = new Image(new FileInputStream("D:\\bg image\\sub page bg img.jpg")); 
         this.backgrountImg = new ImageView(image);
         backgrountImg.setFitHeight(500);
         backgrountImg.setFitWidth(800);
@@ -48,7 +48,7 @@ public class HomePageController {
     @FXML
     void btnBookOnAction(ActionEvent event) throws IOException {
         
-         Image image = new Image(new FileInputStream("C:\\Users\\DELL\\AppData\\Local\\Temp\\f7708835-ac82-4fb7-a920-2ef142a6bef0_background-gradient-minimalist-design-style.zip.ef0\\vvq6.jpg"));           
+         Image image = new Image(new FileInputStream("D:\\bg image\\sub page bg img.jpg"));           
          this.backgrountImg = new ImageView(image);
          backgrountImg.setFitHeight(500);
          backgrountImg.setFitWidth(800);
@@ -67,7 +67,7 @@ public class HomePageController {
     @FXML
     void btnBookCategoryOnAction(ActionEvent event) throws IOException {
         
-        Image image = new Image(new FileInputStream("C:\\Users\\DELL\\AppData\\Local\\Temp\\f7708835-ac82-4fb7-a920-2ef142a6bef0_background-gradient-minimalist-design-style.zip.ef0\\vvq6.jpg"));           
+        Image image = new Image(new FileInputStream("D:\\bg image\\sub page bg img.jpg"));           
         this.backgrountImg = new ImageView(image);
         backgrountImg.setFitHeight(500);
         backgrountImg.setFitWidth(800);
@@ -88,9 +88,9 @@ public class HomePageController {
     @FXML
     void btnIssueBookOnAction(ActionEvent event) throws IOException {
         
-        Image image = new Image(new FileInputStream("C:\\Users\\DELL\\AppData\\Local\\Temp\\f7708835-ac82-4fb7-a920-2ef142a6bef0_background-gradient-minimalist-design-style.zip.ef0\\vvq6.jpg"));           
+        Image image = new Image(new FileInputStream("D:\\bg image\\sub page bg img.jpg"));           
         this.backgrountImg = new ImageView(image);
-        backgrountImg.setFitHeight(544);
+        backgrountImg.setFitHeight(560);
         backgrountImg.setFitWidth(800);
         URL resourse = this.getClass().getResource("/edu/ijse/lms/view/BorrowingView.fxml");
         Parent node = FXMLLoader.load(resourse);
@@ -107,10 +107,17 @@ public class HomePageController {
 
     @FXML
     void btnReturnBookOnAction(ActionEvent event) throws IOException {
+        Image image = new Image(new FileInputStream("D:\\bg image\\sub page bg img.jpg"));           
+        this.backgrountImg = new ImageView(image);
+        backgrountImg.setFitHeight(542);
+        backgrountImg.setFitWidth(776);
         URL resourse = this.getClass().getResource("/edu/ijse/lms/view/ReturnView.fxml");
         Parent node = FXMLLoader.load(resourse);
+        Group gpRoot = new Group();
+        gpRoot.getChildren().add(backgrountImg);
+        gpRoot.getChildren().add(node);
         Stage stage = new Stage();
-        stage.setScene(new Scene(node));
+        stage.setScene(new Scene(gpRoot));
         stage.show();
         stage.setTitle("Return Book");
 
