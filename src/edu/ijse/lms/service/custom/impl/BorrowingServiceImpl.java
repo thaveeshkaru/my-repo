@@ -101,5 +101,20 @@ public class BorrowingServiceImpl implements BorrowingService{
         }
     }  
 
+    @Override
+    public ArrayList<BorrowingDto> getAll() throws Exception {
+        ArrayList<BorrowingEntity> entities=borrowingDao.getAll();
+        ArrayList<BorrowingDto> dtos=new ArrayList<>();
+        for(BorrowingEntity borrowingEntity:entities){
+            BorrowingDto borrowingDto = new BorrowingDto(borrowingEntity.getMemberID(),borrowingEntity.getBookCode(),borrowingEntity.getBorrowingDate(),borrowingEntity.getDueDate());
+            dtos.add(borrowingDto);
+        }
+        return dtos;
+    }
+
+    @Override
+    public String delete(String memberID, String bookCode) throws Exception {
+        return borrowingDao.delete(memberID, bookCode);
+    }
 
 }

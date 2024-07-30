@@ -129,7 +129,7 @@ public class BorrowingController {
             borrowingtbl.getItems().clear();
             
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while placing borrow Book").show();
+            new Alert(Alert.AlertType.ERROR, resp).show();
         }
         
 

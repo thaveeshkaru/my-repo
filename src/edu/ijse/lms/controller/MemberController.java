@@ -62,7 +62,7 @@ public class MemberController {
         colName.setCellValueFactory(new PropertyValueFactory<>("memberName"));
         colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         colContact.setCellValueFactory(new PropertyValueFactory<>("contact"));
-       
+        
         getAllMembers();
     }
 
@@ -99,7 +99,7 @@ public class MemberController {
         }
 
     }
-
+    
     @FXML
     void btnUpdateOnAction(ActionEvent event) throws Exception {
         

@@ -125,7 +125,7 @@ public class ReturnController {
             returnBooktbl.getItems().clear();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while Placing Return").show();
+            new Alert(Alert.AlertType.ERROR, resp).show();
         }
 
     }

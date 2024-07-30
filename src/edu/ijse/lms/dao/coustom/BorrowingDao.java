@@ -8,6 +8,7 @@ import edu.ijse.lms.dao.CrudDao;
 import edu.ijse.lms.dao.SuperDao;
 import edu.ijse.lms.entity.BorrowingEntity;
 import edu.ijse.lms.entity.ReturnEntity;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,4 +19,5 @@ public interface BorrowingDao extends SuperDao{
     String save(BorrowingEntity t) throws Exception;
     BorrowingEntity get( String memberID,String bookCode) throws Exception;
     public String delete(String memberID,String bookCode)throws Exception;
+    public ArrayList<BorrowingEntity> getAll()throws Exception;
 }

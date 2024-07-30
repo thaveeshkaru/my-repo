@@ -37,9 +37,9 @@
             <TableColumn fx:id="colDueDate" prefWidth="248.79998779296875" text="Due Date" />
         </columns>
       </TableView>
-      <Button layoutX="652.0" layoutY="512.0" mnemonicParsing="false" onAction="#btnPlaceOnAction" prefHeight="32.0" prefWidth="109.0" style="-fx-background-color: #662d60;" text="Place Borrow" textFill="#f9f9fa">
+      <Button layoutX="642.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnPlaceOnAction" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #662d60;" text="Place Borrow" textFill="#f9f9fa">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Button>
       <Button layoutX="400.0" layoutY="227.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #662d60; -fx-background-radius: 15px;" text="Add" textFill="#fcfcfc">

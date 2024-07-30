@@ -5,6 +5,7 @@
 package edu.ijse.lms.controller;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import javafx.event.ActionEvent;
@@ -121,5 +122,22 @@ public class HomePageController {
         stage.show();
         stage.setTitle("Return Book");
 
+    }
+    
+    @FXML
+    void btnIssueAndReturnBookOnAction(ActionEvent event) throws IOException {
+        Image image = new Image(new FileInputStream("D:\\bg image\\sub page bg img.jpg"));           
+        this.backgrountImg = new ImageView(image);
+        backgrountImg.setFitHeight(632);
+        backgrountImg.setFitWidth(800);
+        URL resourse = this.getClass().getResource("/edu/ijse/lms/view/IssueAndReturnDetailsView.fxml");
+        Parent node = FXMLLoader.load(resourse);
+        Group gpRoot = new Group();
+        gpRoot.getChildren().add(backgrountImg);
+        gpRoot.getChildren().add(node);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(gpRoot));
+        stage.show();
+        stage.setTitle("Issue And Return Details");
     }
 }

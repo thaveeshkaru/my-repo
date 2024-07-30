@@ -25,8 +25,8 @@ public class MemberDaoImpl implements MemberDao{
 
     @Override
     public String delete(String id) throws Exception {
-        boolean isSaved=CrudUtil.executeUpdate("DELETE FROM member WHERE MemberID=?",id);
-        return isSaved ? "Success" : "Fail";
+        boolean isdeleted=CrudUtil.executeUpdate("DELETE FROM member WHERE MemberID=?",id);
+        return isdeleted ? "Success" : "Fail";
     }
 
     @Override

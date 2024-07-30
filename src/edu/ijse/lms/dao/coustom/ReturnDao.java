@@ -6,6 +6,7 @@ package edu.ijse.lms.dao.coustom;
 
 import edu.ijse.lms.dao.SuperDao;
 import edu.ijse.lms.entity.ReturnEntity;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,4 +14,6 @@ import edu.ijse.lms.entity.ReturnEntity;
  */
 public interface ReturnDao extends SuperDao{
     String save(ReturnEntity t) throws Exception;
+    public ArrayList<ReturnEntity> getAll()throws Exception;
+    public String delete(String memberID, String bookCode, String returnDate)throws Exception;
 }

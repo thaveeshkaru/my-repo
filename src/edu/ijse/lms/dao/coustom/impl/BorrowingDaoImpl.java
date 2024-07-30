@@ -8,6 +8,7 @@ import edu.ijse.lms.dao.CrudUtil;
 import edu.ijse.lms.dao.coustom.BorrowingDao;
 import edu.ijse.lms.entity.BorrowingEntity;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  *
@@ -50,6 +51,18 @@ public class BorrowingDaoImpl implements BorrowingDao{
     public String delete(String memberID, String bookCode) throws Exception {
        boolean isDeleted=CrudUtil.executeUpdate("DELETE FROM borrowing WHERE MemberID=? AND BookCode=?", memberID,bookCode);
        return isDeleted ? "Success" : "Fail";
+    }
+
+    @Override
+    public ArrayList<BorrowingEntity> getAll() throws Exception {
+        ArrayList<BorrowingEntity> borrowingEntity= new ArrayList<>();
+        ResultSet rst = CrudUtil.exeQuery("SELECT * FROM borrowing");
+        
+        while(rst.next()){
+            BorrowingEntity entity = new BorrowingEntity(rst.getString("MemberID"),rst.getString("BookCode"),rst.getString("BorrowingDate"),rst.getString("DueDate"));
+            borrowingEntity.add(entity);
+        } 
+        return borrowingEntity;
     }
     
 }

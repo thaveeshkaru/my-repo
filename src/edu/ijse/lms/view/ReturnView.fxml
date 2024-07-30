@@ -39,9 +39,9 @@
             <TableColumn fx:id="colFine" prefWidth="215.99993896484375" text="Fine" />
         </columns>
       </TableView>
-      <Button layoutX="633.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnPlaceReturnOnAction" prefHeight="32.0" prefWidth="102.0" style="-fx-background-color: #662d60;" text="Place Return" textFill="WHITE">
+      <Button layoutX="624.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnPlaceReturnOnAction" prefHeight="32.0" prefWidth="112.0" style="-fx-background-color: #662d60;" text="Place Return" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="15.0" />
          </font></Button>
       <Label fx:id="borrowingData" layoutX="315.0" layoutY="147.0" prefHeight="32.0" prefWidth="244.0" textFill="WHITE" />
       <Button layoutX="493.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnAddToTableOnAction" style="-fx-background-color: #662d60;" text="Add" textFill="WHITE">
