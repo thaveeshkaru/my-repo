@@ -14,13 +14,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -62,11 +60,6 @@ public class BookController {
 
     @FXML
     private TextField categoryCodeTxt;
-
-    @FXML
-    void btnBackOnAction(ActionEvent event) {
-        
-    }
     
     
     public void initialize() throws Exception {
@@ -91,7 +84,7 @@ public class BookController {
             clearForm();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while Deleating Book").show();
+            new Alert(Alert.AlertType.ERROR, "Error While Deleating Book").show();
         }
         
 
@@ -114,7 +107,7 @@ public class BookController {
             clearForm();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while Saving Book").show();
+            new Alert(Alert.AlertType.ERROR, "Error While Saving Book").show();
         }
         
     }
@@ -131,7 +124,7 @@ public class BookController {
             clearForm();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while Updating Book").show();
+            new Alert(Alert.AlertType.ERROR, "Error While Updating Book").show();
         }
          
     }
@@ -172,24 +165,4 @@ public class BookController {
         
     }
     
-    public String saveBook(BookDto bookDto)throws Exception{
-        return bookservice.saveBook(bookDto);
-    }
-    
-    public String updateBook(BookDto bookDto)throws Exception{
-        return bookservice.updateBook(bookDto);
-    }
-    
-    public String deleteBook(String bookID)throws Exception{
-        return bookservice.deleteBook(bookID);
-    }
-    
-    public ArrayList<BookDto> getAll() throws Exception{
-        return bookservice.getAll();
-    }
-
-    public BookDto get(String bookID)throws Exception{
-        return bookservice.get(bookID);
-                
-    }
 }

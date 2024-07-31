@@ -4,10 +4,8 @@
  */
 package edu.ijse.lms.dao.coustom;
 
-import edu.ijse.lms.dao.CrudDao;
 import edu.ijse.lms.dao.SuperDao;
 import edu.ijse.lms.entity.BorrowingEntity;
-import edu.ijse.lms.entity.ReturnEntity;
 import java.util.ArrayList;
 
 /**

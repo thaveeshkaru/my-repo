@@ -22,21 +22,6 @@ public class BorrowingDaoImpl implements BorrowingDao{
          return isSaved ? "Success" : "Fail";
     }
 
-//    @Override
-//    public String delete(String id) throws Exception {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//
-//    @Override
-//    public ArrayList<BorrowingEntity> getAll() throws Exception {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//
-//    @Override
-//    public String update(BorrowingEntity t) throws Exception {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-
     @Override
     public BorrowingEntity get(String memberID, String bookCode) throws Exception {
             ResultSet rst = CrudUtil.exeQuery("SELECT * FROM borrowing WHERE MemberID=? AND BookCode=?", memberID,bookCode);
@@ -56,7 +41,7 @@ public class BorrowingDaoImpl implements BorrowingDao{
     @Override
     public ArrayList<BorrowingEntity> getAll() throws Exception {
         ArrayList<BorrowingEntity> borrowingEntity= new ArrayList<>();
-        ResultSet rst = CrudUtil.exeQuery("SELECT * FROM borrowing");
+        ResultSet rst = CrudUtil.exeQuery("SELECT * FROM borrowing ORDER BY BorrowingDate");
         
         while(rst.next()){
             BorrowingEntity entity = new BorrowingEntity(rst.getString("MemberID"),rst.getString("BookCode"),rst.getString("BorrowingDate"),rst.getString("DueDate"));

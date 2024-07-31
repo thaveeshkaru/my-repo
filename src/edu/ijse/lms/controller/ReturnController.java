@@ -123,6 +123,7 @@ public class ReturnController {
         if (resp.equals("Success")) {
             new Alert(Alert.AlertType.CONFIRMATION, "Place Return Success").show();
             returnBooktbl.getItems().clear();
+            returnDtos.clear();
 
         } else {
             new Alert(Alert.AlertType.ERROR, resp).show();
@@ -136,19 +137,6 @@ public class ReturnController {
          returnDatetxt.setValue(null);
          finetxt.setText("");
      
-    }
-
-    public Double searchFine(ReturnDto dto)throws Exception{
-        return returnservice.searchFine(dto);
-    }
-
-    public String placeReturn(ArrayList<ReturnDto> returnDtos)throws Exception{
-        return returnservice.placeReturn(returnDtos);
-    }
-
-
-    public BorrowingDto searchBorrowing(String membID, String bookCode)throws Exception{
-        return returnservice.searchBorrowing(membID,bookCode);
     }
     
 }

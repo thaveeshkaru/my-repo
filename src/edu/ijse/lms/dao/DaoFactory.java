@@ -20,12 +20,14 @@ public class DaoFactory {
 
     public DaoFactory() {
     }
+    
     public static DaoFactory getInstance(){
         if (daoFactory==null){
             daoFactory=new DaoFactory();
         }
         return daoFactory;
     }
+    
     public SuperDao getDao(DaoTypes type){
         switch(type){
             case LOGIN:

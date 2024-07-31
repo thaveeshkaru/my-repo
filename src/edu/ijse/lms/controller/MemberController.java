@@ -78,7 +78,7 @@ public class MemberController {
             clearForm();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while Deleting Member").show();
+            new Alert(Alert.AlertType.ERROR, "Error While Deleting Member").show();
         }
 
     }
@@ -95,7 +95,7 @@ public class MemberController {
             clearForm();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while Saving Member").show();
+            new Alert(Alert.AlertType.ERROR, "Error While Saving Member").show();
         }
 
     }
@@ -112,7 +112,7 @@ public class MemberController {
             clearForm();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while Updating Member").show();
+            new Alert(Alert.AlertType.ERROR, "Error While Updating Member").show();
         }
  
     }

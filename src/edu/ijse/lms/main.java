@@ -4,14 +4,7 @@
  */
 package edu.ijse.lms;
 
-//import edu.ijse.lms.view.BookCategoryView;
-//import edu.ijse.lms.view.BookView;
-//import edu.ijse.lms.view.BorrowingView;
-//import edu.ijse.lms.view.LoginView;
-//import edu.ijse.lms.view.MemberView;
-//import edu.ijse.lms.view.ReturnView;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -28,22 +21,15 @@ import javafx.stage.Stage;
  */
 
 public class main extends Application{
-
+    
+    private ImageView backgrountImg;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args)throws Exception{
-        System.out.println("Hello, World!");
         launch(args);
-        // TODO code application logic here
-        //  new LoginView().setVisible(true);
-       //  new MemberView().setVisible(true);
-     //    new BookView().setVisible(true);
-       //   new BookCategoryView().setVisible(true);
-      //    new BorrowingView().setVisible(true);
-       //   new ReturnView().setVisible(true);
+
     }
-    private ImageView backgrountImg;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

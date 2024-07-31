@@ -9,7 +9,6 @@ import edu.ijse.lms.dao.coustom.LoginDao;
 import edu.ijse.lms.dto.LoginDto;
 import edu.ijse.lms.entity.LoginEntity;
 import edu.ijse.lms.service.custom.LoginService;
-import edu.ijse.lms.view.MemberView;
 import java.util.ArrayList;
 
 /**
@@ -25,17 +24,12 @@ public class LoginServiceImpl implements LoginService{
         ArrayList<LoginEntity> entities=LoginDao.getAll();
         
         for(LoginEntity Entity:entities){
-            if (!Entity.getUserName().equals(dto.getUserName())){
-                return "Invalid UserName";
-            } if(!Entity.getPassword().equals(dto.getPassword())){
-                return "Invalid Password";
-              }else{
-                 //new MemberView().setVisible(true);
-                 return "Success";
-            }
+            if (Entity.getUserName().equals(dto.getUserName()) & Entity.getPassword().equals(dto.getPassword())){
+                return "Success";
+           }
             
         }
-        return null;
+        return "Invalid Login Details";
     
     }
     

@@ -33,9 +33,6 @@ public class ReturnServiceImpl implements ReturnService{
     @Override
     public Double searchFine(ReturnDto dto) throws Exception {
         try {
-//            ReturnEntity entity = new ReturnEntity();
-//            entity.setBookCode(dto.getBookCode());
-//            entity.setMemberID(dto.getMemberID());
             BorrowingEntity borrowingentity = borrowingDao.get(dto.getMemberID(),dto.getBookCode());
             double fineRate = 100.0; // Fine rate per day
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

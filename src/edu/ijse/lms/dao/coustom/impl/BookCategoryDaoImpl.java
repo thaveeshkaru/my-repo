@@ -42,8 +42,8 @@ public class BookCategoryDaoImpl implements BookCategoryDao{
 
     @Override
     public String update(BookCategoryEntity t) throws Exception {
-       boolean isSaved = CrudUtil.executeUpdate("UPDATE bookcategory SET Category=?,Description=? WHERE CategoryCode=?",t.getCategory(),t.getDescription(),t.getCategoryCode());
-       return isSaved ? "Success" : "Fail";
+       boolean isUpdated = CrudUtil.executeUpdate("UPDATE bookcategory SET Category=?,Description=? WHERE CategoryCode=?",t.getCategory(),t.getDescription(),t.getCategoryCode());
+       return isUpdated ? "Success" : "Fail";
     }
 
     @Override

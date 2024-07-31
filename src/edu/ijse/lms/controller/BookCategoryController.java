@@ -69,7 +69,7 @@ public class BookCategoryController {
             clearForm();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while Deleteing Book Category").show();
+            new Alert(Alert.AlertType.ERROR, "Error Wile Deleteing Book Category").show();
         }
         
     }
@@ -86,7 +86,7 @@ public class BookCategoryController {
             clearForm();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while Saving Book Category").show();
+            new Alert(Alert.AlertType.ERROR, "Error While Saving Book Category").show();
         }
     }
 
@@ -102,7 +102,7 @@ public class BookCategoryController {
             clearForm();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error while Updating Book Category").show();
+            new Alert(Alert.AlertType.ERROR, "Error While Updating Book Category").show();
         }
 
     }
@@ -134,26 +134,6 @@ public class BookCategoryController {
         categoryCodetxt.setText("");
         categorytxt.setText("");
         descriptiontxt.setText("");
-    }
-
-    public String saveCategory(BookCategoryDto categoryDto)throws Exception{
-        return bookcategoryservice.saveCategory(categoryDto);        
-    }
-    
-    public String updateCategory(BookCategoryDto categoryDto)throws Exception{
-        return bookcategoryservice.updateCategory(categoryDto);        
-    }
-    
-     public String deleteCategory(String categoryCode)throws Exception{
-        return bookcategoryservice.deleteCategory(categoryCode);
-    }
-     
-      public ArrayList<BookCategoryDto> getAll() throws Exception{
-        return bookcategoryservice.getAll();
-    }
-
-    public BookCategoryDto get(String categoryCode)throws Exception{
-        return bookcategoryservice.get(categoryCode);
     }
 
 }

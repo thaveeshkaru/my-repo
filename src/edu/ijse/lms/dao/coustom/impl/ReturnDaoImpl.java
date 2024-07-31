@@ -25,7 +25,7 @@ public class ReturnDaoImpl implements ReturnDao{
     @Override
     public ArrayList<ReturnEntity> getAll() throws Exception {
         ArrayList<ReturnEntity> returnEntity= new ArrayList<>();
-        ResultSet rst = CrudUtil.exeQuery("SELECT * FROM returnbook");
+        ResultSet rst = CrudUtil.exeQuery("SELECT * FROM returnbook ORDER BY ReturnDate");
         
         while(rst.next()){
             ReturnEntity entity = new ReturnEntity(rst.getString("MemberID"),rst.getString("BookCode"),rst.getString("ReturnDate"),rst.getDouble("Fine"));

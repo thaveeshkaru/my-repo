@@ -86,9 +86,7 @@ public class BorrowingController {
         LocalDate borrowld = borrowingDatetxt.getValue();
         borrowingDto.setBorrowingDate(borrowld.toString());
         LocalDate dueld = dueDatetxt.getValue();
-        borrowingDto.setDueDate(dueld.toString());
-      //System.out.println(borrowingDto.getDueDate());
-        
+        borrowingDto.setDueDate(dueld.toString());        
         borrowingDtos.add(borrowingDto);
          
         ObservableList<BorrowingTM> borrowingTMList = FXCollections.observableArrayList();
@@ -108,7 +106,7 @@ public class BorrowingController {
 
         String bookCode = bookCodetxt.getText();
         BookDto dto = borrowingservice.getBook(bookCode);
-        bookData.setText(dto.getBookTitle() + " | " + dto.getAvailability());
+        bookData.setText("Book Title - "+dto.getBookTitle() + " | " + "Availability - "+ dto.getAvailability());
         
     }
 
@@ -116,7 +114,7 @@ public class BorrowingController {
     void btnMemberSearchOnAction(ActionEvent event) throws Exception {
          String membID = memberIDtxt.getText();
          MemberDto dto = borrowingservice.getMember(membID);
-         memberData.setText(dto.getMemberName() + " | " + dto.getAddress() + " | " + dto.getContact());
+         memberData.setText("Name - " + dto.getMemberName() + " | " + "Address - " +  dto.getAddress() + " | " + "Contact - " +  dto.getContact());
     }
 
     @FXML
@@ -127,6 +125,7 @@ public class BorrowingController {
          if (resp.equals("Success")) {
             new Alert(Alert.AlertType.CONFIRMATION, "Place Borrow Success").show();
             borrowingtbl.getItems().clear();
+            borrowingDtos.clear();
             
         } else {
             new Alert(Alert.AlertType.ERROR, resp).show();
@@ -140,19 +139,6 @@ public class BorrowingController {
         bookCodetxt.setText("");
         borrowingDatetxt.setValue(null);
         dueDatetxt.setValue(null);
-    }
-
-    public MemberDto getMember(String membID)throws Exception{
-        return borrowingservice.getMember(membID);
-    }
-
-    public BookDto getBook(String bookCode)throws Exception{
-        return borrowingservice.getBook(bookCode);
-    }
-
-
-    public String placeBorrowing(ArrayList<BorrowingDto> borrowingDtos)throws Exception{
-        return borrowingservice.placeBorrowing(borrowingDtos);
     }
     
 }

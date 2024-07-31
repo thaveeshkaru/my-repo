@@ -116,7 +116,7 @@ public class IssueAndReturnDetailController {
                   getAllBorrowings();
 
               } else {
-                 new Alert(Alert.AlertType.ERROR, "Error While Deleting Borrow").show();
+                 new Alert(Alert.AlertType.ERROR, "Error While Deleting Borrow Book").show();
               }
                
         }

@@ -5,7 +5,6 @@
 package edu.ijse.lms.controller;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import javafx.event.ActionEvent;

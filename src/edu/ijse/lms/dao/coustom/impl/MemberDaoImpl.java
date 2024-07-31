@@ -45,8 +45,8 @@ public class MemberDaoImpl implements MemberDao{
 
     @Override
     public String update(MemberEntity t) throws Exception {
-        boolean isUpdate=CrudUtil.executeUpdate("UPDATE member SET MemberName=?,Address=?,Contact=? WHERE MemberId=?",t.getMemberName(),t.getAddress(),t.getContact(),t.getMemberID());
-        return isUpdate ? "Success" : "Fail";
+        boolean isUpdated=CrudUtil.executeUpdate("UPDATE member SET MemberName=?,Address=?,Contact=? WHERE MemberId=?",t.getMemberName(),t.getAddress(),t.getContact(),t.getMemberID());
+        return isUpdated ? "Success" : "Fail";
     }
 
     @Override

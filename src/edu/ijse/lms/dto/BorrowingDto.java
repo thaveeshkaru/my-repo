@@ -18,7 +18,6 @@ public class BorrowingDto {
     private String borrowingDate;
     private String dueDate;
     
-   // private ArrayList<BorrowingDto> borrowingDtos;
 
     public BorrowingDto() {
     }
