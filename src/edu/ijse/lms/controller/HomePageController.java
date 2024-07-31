@@ -109,7 +109,7 @@ public class HomePageController {
     void btnReturnBookOnAction(ActionEvent event) throws IOException {
         Image image = new Image(new FileInputStream("D:\\bg image\\sub page bg img.jpg"));           
         this.backgrountImg = new ImageView(image);
-        backgrountImg.setFitHeight(542);
+        backgrountImg.setFitHeight(535);
         backgrountImg.setFitWidth(776);
         URL resourse = this.getClass().getResource("/edu/ijse/lms/view/ReturnView.fxml");
         Parent node = FXMLLoader.load(resourse);
