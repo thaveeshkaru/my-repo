@@ -139,6 +139,8 @@ public class BorrowingController {
         bookCodetxt.setText("");
         borrowingDatetxt.setValue(null);
         dueDatetxt.setValue(null);
+        memberData.setText("");
+        bookData.setText("");
     }
     
 }

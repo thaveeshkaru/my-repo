@@ -49,7 +49,7 @@ public class LoginController {
         String resp = Loginservice.getLogin(dto);
         
         if(resp.equals("Success")){
-            Image image = new Image(new FileInputStream("C:\\Users\\DELL\\AppData\\Local\\Temp\\c4f23937-e8fa-417d-b1de-b025b8a1ae36_dark-wavy-background-concept.zip.e36\\3334898.jpg"));           
+            Image image = new Image(new FileInputStream("C:\\Users\\DELL\\AppData\\Local\\Temp\\c4f23937-e8fa-417d-b1de-b025b8a1ae36_dark-wavy-background-concept.zip.e36\\3334898.jpg")); //HomePageimg           
             this.backgrountImg = new ImageView(image);
             backgrountImg.setFitHeight(700);
             backgrountImg.setFitWidth(1100);

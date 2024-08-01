@@ -61,8 +61,5 @@ public class ReturnDto {
         return "ReturnDto{" + "memberID=" + memberID + ", bookCode=" + bookCode + ", returnDate=" + returnDate + ", fine=" + fine + '}';
     }
 
-    
-
-    
 
 }

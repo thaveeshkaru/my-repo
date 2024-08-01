@@ -34,8 +34,8 @@ public class main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception{
        
-
-       Image image = new Image(new FileInputStream("C:\\Users\\DELL\\Downloads\\studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product 222.jpg"));    
+       //img path 
+       Image image = new Image(new FileInputStream("C:\\Users\\DELL\\Downloads\\studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product 222.jpg")); //LoginImg   
         
        this.backgrountImg = new ImageView(image);
        backgrountImg.setFitHeight(500);

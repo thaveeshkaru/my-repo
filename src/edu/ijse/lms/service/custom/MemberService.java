@@ -13,9 +13,11 @@ import java.util.ArrayList;
  * @author DELL
  */
 public interface MemberService extends SuperService{
+    
    public String saveMember(MemberDto membdto) throws Exception;
    public String deleteMember(String membid)throws Exception;
    public ArrayList<MemberDto> getAll()throws Exception;
    public String updateMember(MemberDto memberdto)throws Exception;
    public MemberDto get(String membID)throws Exception;
+   
 }

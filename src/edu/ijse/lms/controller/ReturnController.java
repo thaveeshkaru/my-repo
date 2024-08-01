@@ -136,6 +136,7 @@ public class ReturnController {
          bookCodetxt.setText("");
          returnDatetxt.setValue(null);
          finetxt.setText("");
+         borrowingData.setText("");
      
     }
     

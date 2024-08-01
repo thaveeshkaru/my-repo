@@ -27,8 +27,8 @@ public class BookCategoryServiceImpl implements BookCategoryService{
 
     @Override
     public String updateCategory(BookCategoryDto categoryDto) throws Exception {
-        BookCategoryEntity bookentity = new BookCategoryEntity(categoryDto.getCategoryCode(),categoryDto.getCategory(),categoryDto.getDescription());
-        return categoryDao.update(bookentity);
+        BookCategoryEntity entity = new BookCategoryEntity(categoryDto.getCategoryCode(),categoryDto.getCategory(),categoryDto.getDescription());
+        return categoryDao.update(entity);
     }
 
     @Override

@@ -63,8 +63,8 @@ public class ReturnServiceImpl implements ReturnService{
                      
             for(ReturnDto returndto:returnDtos){
                     ReturnEntity entity = new ReturnEntity(returndto.getMemberID(),returndto.getBookCode(),returndto.getReturnDate(),returndto.getFine());
-                    String borrowresp=returnDao.save(entity);  
-                    if(!borrowresp.equals("Success")){ 
+                    String returnbookresp=returnDao.save(entity);  
+                    if(!returnbookresp.equals("Success")){ 
                         isReturnSaved = false;
                     }
             }
@@ -75,8 +75,8 @@ public class ReturnServiceImpl implements ReturnService{
                 for(ReturnDto returndto:returnDtos){
                     BookEntity bookentity = bookDao.get(returndto.getBookCode());
                     bookentity.setAvailability(bookentity.getAvailability()+1);
-                    String bookUpdate=bookDao.update(bookentity);
-                    if(!bookUpdate.equals("Success")){
+                    String bookupdateresp=bookDao.update(bookentity);
+                    if(!bookupdateresp.equals("Success")){
                         isBookUpdated=false;
                     }
                 }
@@ -95,6 +95,7 @@ public class ReturnServiceImpl implements ReturnService{
                         return "Success";
                         
                     }else{
+                        connection.rollback();
                         return "Borrowing delete Error";
                     }
                     

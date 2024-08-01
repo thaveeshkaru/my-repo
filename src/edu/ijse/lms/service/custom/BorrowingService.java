@@ -15,6 +15,7 @@ import java.util.ArrayList;
  * @author DELL
  */
 public interface BorrowingService extends SuperService{
+    
     public MemberDto getMember(String membID)throws Exception;
     public BookDto getBook(String bookCode)throws Exception;
     public String placeBorrowing(ArrayList<BorrowingDto> borrowingDtos)throws Exception;

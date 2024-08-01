@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * @author DELL
  */
 public interface BookCategoryService extends SuperService{
+    
     public String saveCategory(BookCategoryDto categoryDto) throws Exception;
     public String updateCategory(BookCategoryDto categoryDto) throws Exception;
     public String deleteCategory(String categoryCode) throws Exception;

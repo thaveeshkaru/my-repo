@@ -70,10 +70,14 @@ public class BorrowingServiceImpl implements BorrowingService{
             if(isBorrowSaved){
                 
                 boolean isBookUpdated=true;
+                
                 for(BorrowingDto borrowingdto : borrowingDtos){
                     BookEntity bookentity = bookDao.get(borrowingdto.getBookCode());
                     bookentity.setAvailability(bookentity.getAvailability()-1);
-                    String bookUpdate=bookDao.update(bookentity);
+                    String bookupdateresp=bookDao.update(bookentity);
+                    if(!bookupdateresp.equals("Success")){
+                        isBookUpdated=false;
+                    }
                 }
                 
                 if(isBookUpdated){
@@ -84,8 +88,7 @@ public class BorrowingServiceImpl implements BorrowingService{
                     connection.rollback();
                     return "Book Update Error";
                 }
-            }
-          
+            }          
             else{
                 connection.rollback();
                 return "Borrowing save Error";

@@ -4,7 +4,6 @@
  */
 package edu.ijse.lms.entity;
 
-import java.util.Date;
 
 /**
  *
